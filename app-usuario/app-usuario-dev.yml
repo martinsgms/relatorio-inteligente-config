@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    username: radb
+    password: radb
+    url: jdbc:mysql://martins.c1hfoaookicx.us-east-1.rds.amazonaws.com:3306/radb
