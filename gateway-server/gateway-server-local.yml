@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: app-exame
+          uri: http://localhost:8080/
+          predicates:
+            - Path=/exame/**
+        - id: app-usuario
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/usuario/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

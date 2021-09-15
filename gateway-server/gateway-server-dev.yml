@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: app-exame
+          uri: http://svc-app-exame/
+          predicates:
+            - Path=/exame/**
+        - id: app-usuario
+          uri: http://svc-app-usuario/
+          predicates:
+            - Path=/usuario/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://svc-eureka-server/eureka
