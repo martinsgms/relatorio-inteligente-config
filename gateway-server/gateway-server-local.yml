@@ -10,6 +10,10 @@ spring:
           uri: http://localhost:8081/
           predicates:
             - Path=/usuario/**
+        - id: app-servicoSaude
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/servico-saude/**
 eureka:
   client:
     service-url:
