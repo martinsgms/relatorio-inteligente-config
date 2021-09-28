@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: radb
+    password: radb
+    url: jdbc:mysql://martins.c1hfoaookicx.us-east-1.rds.amazonaws.com:3306/radb
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: svc-app-servicoSaude
+  client:
+    service-url:
+      defaultZone: http://svc-eureka-server/eureka
