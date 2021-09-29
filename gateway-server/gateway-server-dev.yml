@@ -10,6 +10,10 @@ spring:
           uri: http://svc-app-usuario/
           predicates:
             - Path=/usuario/**
+        - id: app-servicosaude
+          uri: http://svc-app-servicosaude/
+          predicates:
+            - Path=/servico-saude/**
 eureka:
   client:
     service-url:
