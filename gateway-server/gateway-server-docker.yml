@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: app-exame
+          uri: http://ra-app-exame/
+          predicates:
+            - Path=/exame/**
+        - id: app-usuario
+          uri: http://ra-app-usuario/
+          predicates:
+            - Path=/usuario/**
+        - id: app-servicosaude
+          uri: http://ra-app-servicosaude/
+          predicates:
+            - Path=/servico-saude/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ra-eureka-server:8761/eureka
