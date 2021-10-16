@@ -1,4 +1,8 @@
 spring:
+  datasource:
+    username: radb
+    password: radb
+    url: jdbc:mysql://martins.c1hfoaookicx.us-east-1.rds.amazonaws.com:3306/radb
   cloud:
     gateway:
       routes:
@@ -14,6 +18,8 @@ spring:
           uri: http://svc-app-servicosaude/
           predicates:
             - Path=/servico-saude/**
+
+
 eureka:
   client:
     service-url:
